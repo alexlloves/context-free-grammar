@@ -35,4 +35,4 @@ try:
         tree.pretty_print()
         tree.draw()  # Opcional: muestra el árbol gráficamente
 except ValueError:
-    print("❌ No se pudo generar un árbol de análisis para esa frase.")
+    print("❌ Non se podo xerar unha árbore de análisis para esa frase.")

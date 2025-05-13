@@ -25,14 +25,14 @@ grammar = nltk.CFG.fromstring("""
     A -> "grande" | "azul" | "pequeno" | "seco" | "ancho"
     D -> "o" | "a" | "un" | "unha"
     N -> "ela" | "cidade" | "coche" | "calle" | "perro" | "binoculares"
-    P -> "na" | "sobre" | "antes" | "debajo" | "con"
+    P -> "sobre" | "antes" | "debajo" | "con"
     V -> "viu" | "caminó"
 """)
 
 parser = nltk.ChartParser(grammar)
 
 # Entrada del usuario
-sentence = input("Introduce unha oración en galego: ").lower().split()
+sentence = input("Introduza unha oración en galego: ").lower().split()
 
 try:
     for tree in parser.parse(sentence):
@@ -40,7 +40,7 @@ try:
         tree.draw()  # Mostrar árbol gráfico (opcional)
         break
 except ValueError:
-    print("❌ No se pode xerar un árbol de análisis.")
+    print("❌ Non se pode xerar unha árbore de análisis.")
 
 
 """Frases de ejemplo que sí funcionan:
@@ -50,5 +50,4 @@ except ValueError:
     o perro viu a cidade
 
     ela viu o coche con binoculares
-
-    o pequeno perro caminou na calle """
+ """
